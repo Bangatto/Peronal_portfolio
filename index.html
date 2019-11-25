@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="nav">
+                <a class="a active" href="#">HOME</a>
+                <a class="b" href="#">ABOUT ME</a>
+                <a class="c" href="#">GALLERY</a>
+                <a class="d" href="#">CONTACT ME</a>
+            </div>
+            <div class="content">
+                <div class="home">
+                    <h1>I am NextZuckerberg</h1>
+                    <h3>Software Engineer</h3>
+                </div>
+                <div class="about me">
+                    <p><b>I`m Gattuoch Kuon</b> by my official names<br>
+                    welcome to my personal portfolio.As a programmer and a upcoming
+                    <b>Zuckerberg,</b><br> it has been my passion always to work on something that give me results
+                    immediately.<br>
+                    Inside this page, you will learn about what i do during my free
+                    time and what commitments I engage into.<br>
+                    I have included part of my work and what i contribute to
+                    in the open source community.  </p>
+                    <p>My passion for Software engineering started when i was in high
+                    school.<br>From then, it has always been my pushing spirit to get
+                    to do what it takes to be the best in the industry. </p>
+                </div>
+                <div class="gallery">
+                    <h2>These are my pictures</h2>
+                    <div class="images">
+                        <img src="img/kuon.JPG">
+                    </div>
+                    <div class="images">
+                        <img src="img/kuon2.JPG">
+                    </div>
+                    <div class="images">
+                        <img src="img/kuon3.JPG">
+                    </div>
+                    <div class="images">
+                        <img src="img/kuon4.JPG">
+                    </div>
+                </div>
+                <div class=Contact Me>
+                    <div class="contactform">
+                        <form action ="index.html" method="post">
+                            <input type="text" name="" class="inputtext" value="First Name">
+                            <input type="text" name="" class="inputtext" value="Last Name">
+                            <input type="text" name="" class="inputtext" value="Your Email">
+                            <textarea cols="4" rows="6" class="inputmessage">Your Messages..!</textarea>
+                            <input type="button" name="" class="submitbutton" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("a").click(function{
+                // alert("I`m clickable")
+                var selected =$(this);
+                $("a").removeClass("active")
+                $(selected).addClass("active");
+            })
+            var $a = $(".a"),
+           $b= $(".b"),
+           $c= $(".c"),
+           $d= $(".d")
+           $home= $(".home"),
+           $about me= $(".about me")
+           $gallery= $(".gallery"),
+           $contact me= $(".contact me")
+
+           $a.click(function(){
+               <!--here i want to display only home information
+               and about me section disappears -->
+
+               $home.fadeIn():
+               $about me.fadeOut();
+               $gallery.fadeOut():
+               $contact me.fadeOut();
+           });
+           $b.click(function(){
+               $home.fadeOut():
+               $about me.fadeIn();
+               $gallery.fadeOut():
+               $contact me.fadeOut();
+           });
+           $c.click(function(){
+               $home.fadeOut():
+               $about me.fadeOut();
+               $gallery.fadeIn():
+               $contact me.fadeOut();
+           });
+           $d.click(function(){
+               $home.fadeOut():
+               $about me.fadeOut();
+               $gallery.fadeOut():
+               $contact me.fadeIn();
+           });
+        });
+        </script>
+    </body>
+</html>
